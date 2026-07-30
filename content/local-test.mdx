@@ -1,0 +1,23 @@
+## Join inside your home first
+
+> [!WARNING] Do not configure public access until LAN joining works
+> A successful local test proves that Minecraft, Fabric, Java, Crafty networking, and the game port work before a tunnel or router is added.
+
+1. On a gaming computer, install the exact Minecraft Java version used by the server.
+2. Add matching Fabric client mods if the server requires them.
+3. Open **Multiplayer → Add Server**.
+4. Enter the ZimaOS LAN IP.
+5. Add `:25565` only when the server uses that port and Minecraft does not infer it.
+6. Join and wait for a complete login.
+
+```text
+192.168.1.50:25565
+```
+
+The example will not match your network.
+
+## Diagnose the message
+
+**Connection refused:** nothing is listening at that IP/port; confirm Crafty says Running and the published container port matches. **Timed out:** wrong route, firewall, Wi-Fi isolation, or the server is overloaded. **Incompatible version:** client, server, or loader/mod set differs. **Unknown host:** the name was typed incorrectly; use the numeric LAN IP.
+
+**Authentication servers unavailable:** check Mojang/Microsoft service status and the server’s internet access; do not disable online mode as a workaround. **Still starting:** wait for `Done`. **Different networks:** guest Wi-Fi, VPNs, mesh isolation, or cellular data can prevent LAN access.
