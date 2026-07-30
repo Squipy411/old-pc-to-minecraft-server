@@ -1,0 +1,31 @@
+## A beginner backup policy
+
+Crafty’s current **Backup Manager** can create configurations, set a retention count, schedule them through the task scheduler, download archives, and restore backups.
+
+1. Open the server’s **Backups / Backup Manager** area.
+2. Create a configuration named `Regular world backup`.
+3. Choose the server directory/world content and an existing backup storage path.
+4. Set a finite retention count, such as 14–28 recent copies.
+5. Enable **Shutdown During Backup** for the safest beginner option.
+6. Save the configuration.
+7. In **Schedules**, create a backup task every 6 or 12 hours.
+8. Run **Backup Now** once and confirm a completed file appears.
+9. Download one backup and copy important versions to an external physical drive or cloud destination.
+
+Crafty warns that copying a live changing filesystem can create inconsistent data. Its current documentation recommends shutting the server down during backup. Compression is optional; follow Crafty’s current warnings and test restores.
+
+## Same-drive is not enough
+
+A backup beside the world protects against a bad mod or accidental file edit. It does not protect against SSD failure, theft, fire, or the entire PC being lost. Aim for multiple copies on at least two kinds of storage, with one copy elsewhere.
+
+## Practise a restore
+
+1. Tell players and stop the server.
+2. Make a copy of the current broken state for later investigation.
+3. Select a known-good backup by date.
+4. Choose **restore in place** for a partial backup or **reset server directory** only for a truly complete backup.
+5. Read the confirmation: resetting replaces current files.
+6. Restore, start, inspect logs, and join locally.
+7. Confirm inventories, builds, dimensions, and mods before inviting everyone back.
+
+Always make a manual backup before Minecraft, Fabric, Java, mod, ZimaOS, or Crafty updates.
