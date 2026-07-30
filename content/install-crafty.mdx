@@ -1,0 +1,21 @@
+## Install the management panel
+
+Crafty is a web management panel. On ZimaOS, apps normally run in **containers**: isolated packages with explicit storage and network connections.
+
+1. Open the ZimaOS **App Store**.
+2. Search for **Crafty Controller**.
+3. Open the listing and inspect the published ports and persistent storage paths.
+4. Keep the listing’s defaults unless you have a known conflict.
+5. Click **Install** and wait for deployment to finish.
+6. Open the Crafty web interface from the app tile.
+7. Follow the listing or Crafty start screen to obtain/create initial credentials.
+8. Sign in and immediately set a unique password.
+9. Bookmark the local dashboard URL.
+
+Use the [current Crafty documentation](https://docs.craftycontrol.com/) when the ZimaOS community listing differs. Crafty’s official container paths include persistent locations for servers, backups, logs, configuration, and imports; losing those mounts can make a recreated container look empty.
+
+## If installation fails
+
+**App missing:** update the ZimaOS catalog, search alternate capitalization, or use the official container instructions only if comfortable with custom app installation. **Container restarts:** inspect its log for a missing mount, invalid setting, or permissions error. **Port conflict:** choose an unused published dashboard port, not Minecraft’s game port. **Certificate warning:** Crafty may use a locally generated HTTPS certificate; verify the local address before proceeding.
+
+**Login unknown:** check the app listing and container log for the initial credential flow. **Blank page/loading forever:** refresh after the container reports healthy, try the direct local address, and temporarily disable aggressive browser extensions. **Storage errors:** confirm each host folder exists and is writable by the container.
