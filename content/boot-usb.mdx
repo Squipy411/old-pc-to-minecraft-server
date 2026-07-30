@@ -1,0 +1,28 @@
+## Boot menu, not a settings maze
+
+The **boot menu** is a one-time list of devices the PC can start from. BIOS/UEFI settings change persistent firmware options. Use the one-time menu first; change only UEFI mode or Secure Boot if the ZimaOS installer genuinely requires it.
+
+1. Turn the PC completely off.
+2. Insert the flashed USB.
+3. Turn it on and immediately tap the boot key about twice per second.
+4. Choose the entry beginning with **UEFI** and matching the USB brand.
+5. Do not choose Windows Boot Manager.
+
+| Brand | Common one-time boot key |
+|---|---|
+| Dell | F12 |
+| HP | Esc, then F9 |
+| Lenovo | F12 |
+| ASUS | F8 |
+| Acer | F12 |
+| MSI | F11 |
+| Gigabyte | F12 |
+| ASRock | F11 |
+
+Model-specific keys vary. Other possibilities are Esc, F8, F9, F10, F11, F12, or Delete. Search the manufacturer’s support page for the exact model when none works.
+
+## If the USB is missing
+
+Try a rear USB 2.0 port, reflash the image, or test another USB stick. Confirm **UEFI** boot is enabled. ZimaSpace’s current generic-PC guide says Secure Boot must be disabled. Do not disable unrelated security, virtualization, storage, or CPU settings.
+
+**No keyboard input:** try a wired keyboard and a different port. **Black screen:** wait two minutes, then try the motherboard video output or another display cable. **Back to Windows:** open the boot menu again, select the UEFI USB, and confirm Fast Startup did not perform a partial shutdown. **Legacy-only PC:** very old firmware may not meet the current ZimaOS UEFI requirement.
