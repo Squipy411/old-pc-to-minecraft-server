@@ -1,0 +1,24 @@
+## Match Java to Minecraft
+
+Minecraft server files run inside a Java runtime. The wrong major version often fails before the world loads. Crafty may provide or select Java runtimes, but you must still match the server build’s published requirement.
+
+| Minecraft generation | Common Java baseline | Verify before use |
+|---|---|---|
+| 1.16.5 and older | Java 8 for many releases | Server/modpack docs |
+| 1.17 | Java 16 | Minecraft/Fabric docs |
+| 1.18–1.20.4 | Java 17 | Exact server version docs |
+| 1.20.5 through current 1.21.x | Java 21 for current releases | Current Fabric “Installing Java” page |
+
+This table is an orientation aid, not permission to guess. Current Fabric documentation states Java 21 for the current 1.21 generation, but future Minecraft versions can change the requirement.
+
+## Recognize a Java error
+
+`UnsupportedClassVersionError` usually means the runtime is too old for code that was compiled with a newer Java. “Class file version” messages are the same clue. A native-library or removed-module error can mean Java is too new for an old modpack.
+
+1. Note the exact Minecraft and modpack version.
+2. Read that release’s official Java requirement.
+3. In Crafty, open the server’s configuration/startup settings.
+4. Select the matching Java executable or supported container/runtime option.
+5. Save, start once, and read the first error—not only the final “server stopped” line.
+
+The newest Java is not universally correct for old Minecraft. Change Java only after confirming the expected version.
