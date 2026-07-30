@@ -1,0 +1,23 @@
+## Change one layer at a time
+
+Minecraft, Fabric Loader, Fabric API, mods, Java, Crafty, and ZimaOS are separate layers. “Update everything” turns one problem into seven possible causes.
+
+1. Tell players about downtime.
+2. Stop the server normally.
+3. Create and download a complete backup.
+4. Read the target Minecraft version’s release notes and Java requirement.
+5. Update Fabric Loader using Crafty’s current supported workflow.
+6. Download matching Fabric API.
+7. Update each required mod; remove those explicitly unsupported.
+8. Start and inspect the full log.
+9. Test locally with the matching client/modpack.
+10. Reopen to players only after world, inventories, dimensions, and backups look right.
+
+## Know what you are updating
+
+**Loader update:** changes Fabric’s mod-loading layer. **Minecraft update:** changes game code/data and often breaks mods. **Java update:** changes the runtime. **Mod update:** changes one add-on and may add dependencies. **Crafty update:** changes the management panel, not the world version. **ZimaOS update:** changes the host platform and container environment.
+
+> [!WARNING] Backups are not decoration
+> Verify that you can download/open an archive before a major upgrade. Keep the older server and modpack versions documented so rollback is possible.
+
+For a major Minecraft jump, clone/import the server into a test instance on another port when storage permits. Never let two instances write to the same world folder.
