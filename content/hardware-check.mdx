@@ -1,0 +1,37 @@
+## Beginner checklist
+
+- [ ] 64-bit x86 PC (most Intel or AMD desktop/laptop PCs from the last decade)
+- [ ] CPU with decent single-core speed
+- [ ] 8 GB RAM preferred; 16 GB is a comfortable target
+- [ ] SSD strongly preferred over a hard drive
+- [ ] Wired Ethernet connection
+- [ ] 8 GB or larger USB stick
+- [ ] Monitor and keyboard for installation
+- [ ] Router or ISP app access
+- [ ] A second drive or external destination for backups
+
+ZimaSpace currently documents generic x86-64 hardware with at least **25 GB** of storage. The Minecraft world, mods, logs, and backups need much more breathing room; a 120 GB or larger SSD is a more practical floor.
+
+## What RAM can realistically mean
+
+| System RAM | Sensible expectation |
+|---|---|
+| 4 GB | Very limited; the OS and panel leave little for Minecraft |
+| 8 GB | Small lightweight server; start around 3–4 GB for Minecraft |
+| 16 GB | Good for many friend groups; start around 5–6 GB |
+| 32 GB+ | Helpful for heavier packs or more services, but not automatically faster |
+
+Minecraft’s main game loop depends heavily on **single-core CPU performance**. A newer 4-core CPU can beat an older many-core workstation chip. A graphics card is not required for a headless dedicated server.
+
+## Estimate the whole workload
+
+Ask: What CPU model is inside? SSD or HDD? How many simultaneous players? Mostly vanilla, optimization mods, or a full modpack? Which exact Minecraft version? Will it run 24/7? Do players build large farms or explore quickly?
+
+For 1–5 players with Fabric optimization mods, 8 GB total RAM and an SSD can be workable. For 6–10 players or a moderate pack, 16 GB is a better starting point. Large packs vary wildly; follow their published server requirements.
+
+> [!TIP] Measure power, too
+> A 70-watt PC running all day uses about 51 kWh in a 30-day month. Multiply that by your electricity rate. Sleep timers, scheduled shutdowns, or efficient mini PCs can change the economics.
+
+## Network reality
+
+Use Ethernet when possible. Home **upload** speed matters because the server sends world data to friends. A tunnel cannot remove physical distance or poor upload performance. Wi-Fi can work, but interference can look exactly like server lag.
