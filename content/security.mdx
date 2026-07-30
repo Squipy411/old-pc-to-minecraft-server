@@ -1,0 +1,38 @@
+## Lock the player door
+
+Keep these values in `server.properties`:
+
+```properties
+online-mode=true
+white-list=true
+enforce-whitelist=true
+enable-rcon=false
+```
+
+Online mode asks Mojang/Microsoft authentication services to verify player identity. Turning it off allows impersonation and weakens account-based permissions. RCON is remote console access; leave it disabled unless you have a specific protected use.
+
+## Whitelist and operators
+
+Run these in Crafty’s server console, without a leading slash:
+
+```text
+whitelist on
+whitelist add PlayerName
+whitelist remove PlayerName
+whitelist list
+op YourMinecraftName
+deop PlayerName
+```
+
+Operators can run powerful commands and change the world. Grant it only to people who manage the server; normal players do not need it.
+
+## Protect the management side
+
+- Use unique passwords for ZimaOS, Crafty, Playit, router, and email.
+- Keep the ZimaOS and Crafty dashboards reachable only on your trusted LAN or a properly authenticated private remote-access method.
+- Install updates after reading release notes and making a backup.
+- Download mods from their official project pages and inspect unexpected dependencies.
+- Do not run a cracked/offline-mode server as a shortcut for login trouble.
+- Do not claim that either a tunnel or one open port makes a server invulnerable.
+
+When someone you do not recognize joins, stop the server, verify the whitelist and `online-mode`, review operators, change exposed credentials, and inspect logs before reopening.
