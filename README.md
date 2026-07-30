@@ -34,7 +34,7 @@ npm run build
 - `app/markdown.tsx` — lightweight renderer and reusable callout, command, table, checklist, and consent-friendly video components
 - `app/guide-content.ts` — chapter order, navigation groups, summaries, and estimates
 - `content/*.mdx` — all 29 editable guide chapters
-- `public/og.png` — project-specific social preview
+- `public/og.jpg` — project-specific social preview
 
 ## Edit guide content
 
