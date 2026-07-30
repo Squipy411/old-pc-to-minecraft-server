@@ -1,0 +1,21 @@
+## Put it in the active world
+
+Datapacks change recipes, loot, functions, advancements, and sometimes world generation through Minecraft’s data system. They do not require Fabric unless the datapack’s author says otherwise.
+
+The typical server path is:
+
+```text
+world/datapacks
+```
+
+But `level-name` in `server.properties` determines the active world folder. If it says `level-name=friends`, use `friends/datapacks`.
+
+1. Read the datapack’s Minecraft-version requirement and install notes.
+2. Back up the world.
+3. Stop the server if the pack changes world generation.
+4. Upload the datapack `.zip` or folder to the active world’s `datapacks` directory.
+5. Start the server.
+6. In the console or as an operator, run `/datapack list`.
+7. Confirm it appears under enabled packs and inspect warnings.
+
+Some world-generation datapacks must be present before the world is created. Others affect only newly generated chunks, leaving explored land unchanged. Removing world-generation data later can create harsh chunk borders or missing content; follow the author’s removal instructions.
