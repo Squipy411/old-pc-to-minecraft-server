@@ -6,6 +6,8 @@ A polished, beginner-first field guide for turning an unused x86-64 PC into a se
 
 ## Live demo
 
+Website: <https://old-pc-to-minecraft-server.vercel.app>
+
 Repository: <https://github.com/Squipy411/old-pc-to-minecraft-server>
 
 ## Run locally
