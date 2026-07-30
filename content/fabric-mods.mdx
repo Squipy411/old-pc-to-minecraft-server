@@ -1,0 +1,26 @@
+## Four kinds of add-on
+
+**Server-only mods** change server logic and do not need to be sent to players. **Client-only mods** change rendering or interface and normally crash or do nothing on a dedicated server. **Both-sides mods** add content or protocol behavior and must match on server and clients. **Dependencies** are libraries another mod needs.
+
+Fabric Loader starts Fabric mods. Fabric API is a common library, not the loader. Datapacks live inside a world and usually do not require Fabric. Bukkit/Spigot/Paper **plugins** are a different ecosystem and do not run on Fabric unless a specific compatibility layer supports them.
+
+> [!NOTE] Sodium belongs on player computers
+> Sodium is primarily a client rendering optimization. It normally does not belong in a dedicated server’s mods folder.
+
+## Sensible server optimization candidates
+
+[Lithium](https://modrinth.com/mod/lithium), FerriteCore, Krypton, ServerCore, Alternate Current, and compatible pregeneration tools are common starting points. Verify the exact Minecraft and Fabric support on each project page. A familiar name is not proof that its current file supports your version.
+
+Use [Modrinth](https://modrinth.com/) or [CurseForge](https://www.curseforge.com/minecraft), preferably the author’s official project page. Avoid random rehosting/download sites.
+
+## Upload one small batch
+
+1. Stop the server normally.
+2. Download the correct Fabric `.jar`.
+3. Confirm Minecraft version, loader, environment, and dependencies.
+4. In Crafty’s file manager, open `mods`.
+5. Upload the file without unzipping it.
+6. Start the server and read the console.
+7. Join and test the changed behavior.
+
+Add only a few mods at a time. When startup breaks, the last small batch is easy to remove.
