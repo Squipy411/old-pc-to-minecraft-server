@@ -1,0 +1,33 @@
+## Build it in Crafty
+
+Crafty 4’s official builder begins under **Create a Server**, with separate Minecraft Java and Bedrock choices. Exact build providers shown in the panel can change.
+
+1. Open **Servers** and choose **Create New Server**.
+2. Select **Minecraft Java**.
+3. Choose the download/build workflow offered by the current panel.
+4. Select **Fabric** as the server type when available.
+5. Choose the exact Minecraft version your players will use.
+6. Choose a Fabric Loader version marked compatible with it.
+7. Name the server clearly, such as `Friends-Survival-1.21`.
+8. Set the server port to `25565` if that container port is available.
+9. Set minimum and maximum memory.
+10. Create the server and start it once.
+11. Read the Minecraft EULA prompt, accept only if you agree, and restart.
+12. Wait for a log line ending with **Done** and a load time.
+
+## Memory starting points
+
+| Total system RAM | Start with for Minecraft |
+|---|---|
+| 8 GB | 3–4 GB |
+| 16 GB | 5–6 GB |
+| 32 GB | 6–10 GB, depending on the pack |
+
+Leave memory for ZimaOS, Crafty, containers, and filesystem cache. Allocating every gigabyte can cause swapping or an out-of-memory stop. More heap can also make garbage-collection pauses longer.
+
+## What the first start means
+
+The server directory is the persistent folder containing `server.properties`, the world, mods, logs, and EULA. First start downloads or generates files and is slower. **Done** means the main server startup finished; warnings above it may still matter. Use Crafty’s normal **Stop** button and wait for shutdown confirmation. **Kill** is an emergency action that can interrupt a world save.
+
+> [!TIP] Preserve the port mapping
+> Crafty’s Docker documentation notes that a server port must be within the ports published to the container. If 25565 is not mapped, adjust the app’s published range before blaming Minecraft.
