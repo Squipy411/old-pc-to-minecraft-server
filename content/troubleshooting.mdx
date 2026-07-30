@@ -1,0 +1,39 @@
+## Start at the earliest broken layer
+
+Search this chapter from the top bar. Fix one thing, test, and write down the result. A later public-connectivity test cannot diagnose a server that never reached `Done`.
+
+## USB will not boot
+
+**Symptom:** Windows starts or the USB is absent. **Likely cause:** wrong boot entry, failed flash, Secure Boot, or old firmware. **First check:** re-open the one-time boot menu and select the UEFI USB. **Fix:** reflash with Etcher, use a USB 2.0 port/stick, confirm UEFI mode, and disable Secure Boot only as current ZimaOS docs require. **Ask for help with:** PC model, boot-menu photo, ZimaOS image name, and Etcher result.
+
+## ZimaOS install or dashboard fails
+
+**Install target missing:** reconnect the drive, verify the firmware sees it, and check whether a RAID/storage mode needs manufacturer guidance. **Installer loops:** remove USB after completion. **Dashboard unreachable:** read the displayed IP, use `http://`, stay off guest/cellular networks, confirm Ethernet and router device list. **Ask with:** current screen, server IP, client IP, router model, and whether another home device can connect.
+
+## Crafty will not open
+
+**Symptom:** blank page, certificate warning, or endless loading. **Likely cause:** container still starting, wrong published port, or local certificate. **First check:** ZimaOS says the container is running and its log has no repeating fatal error. **Fix:** use the app tile’s direct local link, confirm mapped ports, inspect mounts/permissions, and restart the container once. Do not expose Crafty publicly.
+
+## Server does not start
+
+**EULA not accepted:** use Crafty’s EULA prompt or set the file only after reading it. **Wrong Java:** compare `java -version`/Crafty runtime with the exact Minecraft requirement. **Missing Fabric API/dependency:** read Fabric’s dependency block and install the named matching files. **Forge mod on Fabric:** replace it with a Fabric build. **Client-only mod on server:** remove it and verify the project’s Environment label. **Incompatible version:** every jar must match the Minecraft generation.
+
+**Address already in use / 25565 occupied:** another server/container owns the port. Stop the duplicate or choose a published unused port, then update LAN and tunnel addresses. **Permission denied:** verify Crafty’s persistent server folder is writable by its container user. **Disk full:** delete only known old logs/backups after copying what matters, then increase retention discipline.
+
+## Friends cannot join
+
+First prove LAN joining. If LAN fails, public access is not the current problem. If LAN works: for Playit, check agent online, exact local LAN IP/port, and TCP; for port forwarding, check reservation, TCP 25565, public-vs-private address, double NAT, and CGNAT. Test from outside the home network.
+
+**Unknown host:** re-copy the hostname without spaces. **Timeout:** wrong destination, stopped server, firewall, tunnel route, or severe overload. **Whitelist blocks player:** use the exact Java account name and `whitelist list`. **Player not found:** the player may need to join/resolve once, or the name is wrong. **Authentication error:** keep online mode on and check official service status/time settings.
+
+## Mods and datapacks
+
+**Mods folder missing:** start a correctly built Fabric server once, stop it, then create/use the folder Crafty’s server directory expects. **Upload fails:** check size, permissions, free space, and whether the file manager session expired. **Datapack not loading:** confirm active `level-name`, `world/datapacks`, version/pack format, and `/datapack list` output.
+
+## Lag, corruption, and shutdowns
+
+**High ping for one player:** routing/Wi-Fi/distance. **Everyone slow with low TPS:** inspect MSPT, CPU, generation, farms, and mods. **World corruption:** stop immediately, copy current files, and restore the last tested backup; do not repeatedly start and overwrite evidence. **Stuck shutdown:** wait for save, capture log, then kill only as a last resort. Afterward, test the world locally.
+
+## When to ask for more help
+
+Ask when the same exact error survives a documented clean test, storage hardware reports errors, or you are unsure which drive/restore option will erase data. Include the first relevant error and 30–50 lines around it—not only a screenshot of the final “stopped” line.
