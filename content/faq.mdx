@@ -1,0 +1,61 @@
+## Hardware and cost
+
+### Is ZimaOS free, and do I need Zima hardware?
+
+ZimaOS Community Edition is offered for generic x86-64 hardware; you do not need a Zima-branded PC. Check the current download terms and hardware requirements before installation.
+
+### Is Ubuntu or Windows better?
+
+Ubuntu Server offers more conventional control and broader documentation but asks more of a beginner. Windows can host Minecraft without erasing the PC, but has desktop overhead and a different management story. ZimaOS plus Crafty is chosen here for its browser-managed, app-oriented flow—not because it is universally best.
+
+### Laptop, HDD, GPU, monitor, Wi-Fi?
+
+A laptop can work, but disable sleep-on-lid-close safely, protect cooling, and consider battery swelling/heat. An HDD works but makes chunk generation, saves, and backups slower; an SSD is strongly preferred. A dedicated server needs no gaming GPU. The monitor can be disconnected after network access is reliable. Ethernet is steadier than Wi-Fi.
+
+### How many players can it support?
+
+There is no honest answer from RAM alone. CPU single-core performance, Minecraft version, mods, view distance, farms, exploration, SSD, and upload speed dominate. Start small, measure TPS/MSPT, and increase gradually.
+
+### How much electricity will it use?
+
+Measure wall power with a plug meter. Monthly kWh is roughly watts × 24 × 30 ÷ 1000 for 24/7 operation. Multiply by your utility rate. The PC must remain on while the server is available.
+
+## Editions, mods, and worlds
+
+### Can I host Bedrock or let Bedrock players join Java?
+
+This guide is for Java Edition. Bedrock uses different server software and networking. Projects such as Geyser can bridge some Bedrock clients to Java, but add configuration, compatibility, and often an additional UDP port. Treat that as a separate project after Java works.
+
+### Plugins on Fabric? Sodium on the server?
+
+Paper/Spigot plugins are not Fabric mods. Compatibility projects exist but can introduce edge cases. Prefer native Fabric mods. Sodium is primarily client-side rendering optimization and normally does not belong on the dedicated server.
+
+### Can I add mods later or move an existing world?
+
+Yes, after a backup. Content/world-generation mods may affect only new chunks or make removal unsafe. To move a world, stop both servers, copy the complete world folder (including dimensions/data), set `level-name` correctly, and test locally with matching mods.
+
+### Will updating Minecraft break mods?
+
+Often. Update Minecraft, Loader, API, and mods as a tested set. Back up and keep a known-good client profile.
+
+## Networking and access
+
+### Is port forwarding dangerous?
+
+Any public service adds risk. Forwarding only Minecraft TCP, keeping software updated, using online mode and a whitelist, and leaving dashboards private limits exposure. It is not zero-risk.
+
+### Does Playit hide my home IP?
+
+Friends normally connect to the Playit hostname rather than your public IP, but do not treat a tunnel as anonymity or a security boundary. Playit and network infrastructure still handle traffic, and your local services need secure configuration.
+
+### Can I use a domain, host multiple servers, or access Crafty remotely?
+
+A domain can point to a stable public/tunnel address with suitable DNS/SRV records. Multiple servers need distinct local ports and usually distinct tunnel/forward rules. Remote Crafty access should use an authenticated private network/VPN or a carefully secured reverse proxy—not a raw forwarded dashboard port.
+
+### What happens in a power outage?
+
+The server stops and may lose unsaved work if power disappears during a write. A UPS can provide time for a clean shutdown. Configure ZimaOS/firmware power-recovery behavior only after understanding it, and test backup restoration.
+
+## Maintenance reality
+
+Self-hosting avoids a recurring game-host bill, not maintenance. Internet outages, failed drives, updates, incompatible mods, backups, and electricity remain your responsibility. For some groups, Aternos, Realms, or a paid host is the calmer choice—and that is a valid outcome of the hardware check.
