@@ -1,0 +1,27 @@
+## TPS and MSPT without the math fog
+
+Minecraft aims for **20 ticks per second (TPS)**. Each tick updates mobs, redstone, weather, and more. At 20 TPS, a tick has a **50 millisecond** budget. **MSPT** is milliseconds per tick. Under 50 MSPT can sustain 20 TPS; consistently above 50 means the world starts running in slow motion.
+
+Ping is network travel time. A player can have high ping while TPS remains perfect, or low ping while the whole server lags. Ask whether everyone feels the slowdown.
+
+## What usually costs time
+
+New chunk generation, many spread-out players, entities, item piles, mob farms, hoppers, redstone clocks, large view/simulation distances, and incompatible mods increase CPU work. An HDD can stall chunk loads and saves. Too little RAM causes pressure; too much assigned heap is not a CPU upgrade.
+
+## A calm lag checklist
+
+1. Ask whether the lag affects everyone or one player.
+2. Check TPS/MSPT in the server/mod metrics.
+3. Check Crafty/ZimaOS RAM use and whether swapping occurs.
+4. Check CPU use; one saturated core can be the limit.
+5. Check disk activity and free space.
+6. Remove or roll back only the newly added mod batch.
+7. Reduce `view-distance` to 8 and `simulation-distance` to 6 as a test.
+8. Pregenerate a bounded area before exploration sessions.
+9. Inspect huge farms, entity buildup, and always-on redstone.
+10. Make a backup, then restart normally.
+
+> [!WARNING] JVM flags are not a magic spell
+> Use the server software/modpack’s documented Java options. Copying an unexplained flag collection can hurt compatibility or hide the real bottleneck.
+
+Optimization mods such as Lithium or FerriteCore can help when their exact release supports your Minecraft/Fabric combination. Measure before and after one change.
