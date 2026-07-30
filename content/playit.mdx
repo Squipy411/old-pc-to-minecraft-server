@@ -1,0 +1,28 @@
+## What the tunnel does
+
+Playit’s agent makes an outbound connection to Playit’s network. Friends connect to a public hostname, and the tunnel carries Minecraft traffic back to your local server. Friends do not install the agent. Free and paid features change, so check [Playit’s current site](https://playit.gg/) rather than relying on an old price list.
+
+1. Create a Playit account.
+2. Install the official agent on ZimaOS using the current app or container instructions.
+3. Open the claim link shown by the agent and attach it to your account.
+4. Create a **Minecraft Java** tunnel.
+5. Select TCP when the dashboard asks for protocol.
+6. Set the local address to the ZimaOS LAN IP.
+7. Set the local port to `25565`, or the actual Crafty server port.
+8. Save and wait for the agent/tunnel to show online.
+9. Copy the generated hostname exactly.
+10. Test it from a different network, such as a trusted friend’s home—not only your own Wi-Fi.
+
+## The container trap
+
+Inside a separate Playit container, `127.0.0.1` means “this Playit container,” not the Crafty/Minecraft container. For a beginner setup, target the reserved **ZimaOS LAN IP plus the Minecraft port** unless the ZimaOS Playit app explicitly wires the containers together. A shared Docker network and container hostname can also work, but they are an advanced choice.
+
+Use `127.0.0.1` only when the agent and Minecraft truly share the same network namespace. Do not guess.
+
+<VideoPlayit />
+
+## Tunnel troubleshooting
+
+**Agent offline:** restart it and inspect its claim/network status. **Active tunnel, failed join:** prove LAN joining again, then check the tunnel’s local IP and port. **Crafty changed the port:** update the tunnel. **TCP/UDP confusion:** normal Minecraft Java gameplay uses TCP; voice-chat mods may need a separate UDP tunnel.
+
+**High latency:** distance and tunnel routing matter; Playit’s support pages expose agent/datacenter latency guidance. **Multiple tunnels:** label them and ensure each points to one intended local port. **Container cannot reach Crafty:** use the host LAN IP or intentionally connect both containers to a shared network.
