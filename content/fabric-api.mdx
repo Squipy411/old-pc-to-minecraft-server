@@ -1,0 +1,17 @@
+## Loader is the engine; API is a shared toolbox
+
+Fabric Loader discovers and starts mods. **Fabric API** is a separate mod containing hooks and utilities many mods share. A server can have Loader installed and still fail because a mod expects Fabric API.
+
+Download it only from the [official Fabric API project page on Modrinth](https://modrinth.com/mod/fabric-api) or the project’s linked official source. Filter for the exact Minecraft version and Fabric environment, then place the `.jar` in the server’s `mods` folder. Players also need it when their required client/shared mods depend on it.
+
+## Missing API symptoms
+
+Fabric’s dependency error usually names `fabric-api` or a specific `fabric-*` module and lists a required version. Read the dependency block near the top of the log.
+
+1. Stop the server.
+2. Remove any Fabric API file for a different Minecraft version.
+3. Download the matching current file.
+4. Upload it to `mods`.
+5. Start and confirm the dependency error is gone.
+
+Do not install multiple Fabric API versions “just in case.”
