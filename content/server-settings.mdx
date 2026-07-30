@@ -1,0 +1,28 @@
+## A safe small-server baseline
+
+Open `server.properties` from Crafty’s configuration or file manager while the server is stopped. Begin with:
+
+```properties
+motd=Friends Survival
+max-players=10
+view-distance=8
+simulation-distance=6
+online-mode=true
+white-list=true
+enforce-whitelist=true
+server-port=25565
+```
+
+**View distance** controls how far chunks are sent. **Simulation distance** controls how far entities, crops, and redstone actively tick. Lowering simulation distance can save substantial CPU. The right values depend on hardware, mods, farms, and player spread.
+
+## Other useful settings
+
+`difficulty` changes hostile-mob difficulty. `gamemode` sets the default for new players. `pvp` allows player damage. `spawn-protection` limits building near spawn for non-operators. `allow-flight` may need to be true for flight mods that otherwise trigger movement checks. `enable-command-block` allows command blocks. Keep `online-mode=true` to verify player identities.
+
+1. Stop the server.
+2. Edit only the setting you understand.
+3. Save without changing the filename.
+4. Start and inspect the console for a parse warning.
+5. Test the setting in game.
+
+Never put a public hostname in `server-ip`. In most home/container setups, leave `server-ip=` blank so Minecraft listens on the available interfaces.
