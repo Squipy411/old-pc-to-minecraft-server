@@ -1,0 +1,25 @@
+## Optional router route
+
+Port forwarding tells the router to send one incoming internet port to the Minecraft server’s private LAN address. Router screens differ; use the manufacturer or ISP’s current instructions for the exact buttons.
+
+> [!DANGER] Forward only Minecraft
+> Do not expose the ZimaOS dashboard, Crafty dashboard, SSH, databases, or Docker management ports. The only rule in this guide is Minecraft TCP 25565.
+
+1. Confirm the server’s LAN IP is reserved.
+2. Open the router app or administrator page.
+3. Find **Port Forwarding**, **NAT**, **Virtual Server**, or **Applications & Gaming**.
+4. Create a TCP rule for external port `25565`.
+5. Choose the ZimaOS server or enter its reserved LAN IP.
+6. Set internal port `25565`.
+7. Save/apply.
+8. Test from cellular data or another home network.
+
+## Terms that explain failures
+
+A **private IP** such as `192.168.x.x` works only inside home. A **public IP** identifies the internet-facing connection. **TCP** is Minecraft Java’s main reliable transport. External port is the public door; internal port is Minecraft’s local door.
+
+**Double NAT** means two routers both perform routing, so both may need correct configuration or bridge mode. **CGNAT** means the ISP shares a public address; ordinary inbound forwarding usually cannot reach your router. A tunnel such as Playit is often simpler. A dynamic public IP can change later.
+
+Testing your own public address from the same Wi-Fi may fail when the router lacks **NAT loopback**, even though an outside friend can join.
+
+Sharing a public IP with trusted friends is common, but it reveals the approximate ISP/network location. Do not post it publicly. Use a hostname or tunnel when you need easier sharing—not as a claim of perfect anonymity or security.
