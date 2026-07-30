@@ -1,0 +1,20 @@
+## Generate exploration work in advance
+
+Minecraft normally creates chunks as players move into new territory. Generation is CPU- and storage-heavy, so fast exploration can produce lag. A pregeneration mod asks the server to create a bounded area ahead of time.
+
+Chunky and Fabric-compatible world-generation alternatives are common, but support varies by Minecraft version and loader. Verify the project’s current Fabric file and commands on its official Modrinth/GitHub page before installing.
+
+1. Make and download a complete backup.
+2. Choose a realistic world border. A radius that doubles creates roughly four times the area.
+3. Confirm several times more free storage than the current world uses.
+4. Install the compatible tool and its dependencies.
+5. Set the center and border using the tool’s current documented commands.
+6. Start pregeneration when players are offline.
+7. Watch TPS, temperature, disk space, and the tool’s progress.
+8. Let it stop cleanly; do not kill the container.
+9. Back up again after completion.
+
+> [!NOTE] Bigger is expensive
+> Pregeneration can take hours or days and consume many gigabytes. A modest border that covers expected play is better than generating an enormous empty world.
+
+Do not heavily use the world while it is generating. World-generation datapacks or mods should be installed first so the generated terrain matches future chunks.
