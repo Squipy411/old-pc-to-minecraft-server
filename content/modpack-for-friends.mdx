@@ -1,0 +1,20 @@
+## Export one repeatable client profile
+
+The Modrinth App can create a profile with a specific Minecraft version, Fabric Loader, and a controlled set of client/shared mods. Exporting the profile is safer than asking every friend to find 30 files manually.
+
+1. Install the [Modrinth App](https://modrinth.com/app) from its official site.
+2. Create a new instance/profile.
+3. Choose the exact Minecraft version used by the server.
+4. Select Fabric and the compatible Loader version.
+5. Add Fabric API and every mod required on both sides.
+6. Add optional client performance/interface mods if appropriate.
+7. Launch once and join locally.
+8. Export the profile in the launcher’s supported pack format.
+9. Send the small pack manifest/export—not a hand-built folder of redistributed jars.
+10. Have each player choose **Import profile** and test before public play.
+
+Server-only mods do not belong in the player pack. Respect each project’s licence and pack permissions; a manifest that lets the launcher fetch authorized files is preferable.
+
+## Keep versions synchronized
+
+Write a pack version in the profile name, such as `Friends Pack 1.3`. When anything changes, update a test copy, verify the server/client combination, export a new pack version, and tell players not to mix old and new files.
