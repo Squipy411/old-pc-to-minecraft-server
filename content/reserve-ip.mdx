@@ -1,0 +1,16 @@
+## Make the local address stay put
+
+DHCP normally lends an address for a period of time. A **DHCP reservation** tells the router, “When this specific server asks, always give it this address.” This keeps Crafty bookmarks, Playit destinations, and port-forward rules from silently pointing at the wrong device later.
+
+1. Open the router’s app or administrator page.
+2. Find **Connected devices**, **Network map**, **Clients**, or **Device list**.
+3. Select the ZimaOS computer. Match its current IP and wired connection.
+4. Choose **Reserve IP**, **DHCP reservation**, **Address reservation**, **Static lease**, or **Always use this IP**.
+5. Save.
+6. Restart ZimaOS only if the router asks.
+7. Confirm the dashboard still opens at the reserved address.
+
+> [!NOTE] Router-specific advice
+> Comcast/Xfinity, AT&T, Spectrum, Verizon, Eero, Google/Nest WiFi, TP-Link, ASUS, and UniFi all label this differently. Use the ISP or router maker’s current instructions for the exact clicks.
+
+Do not manually set an address inside ZimaOS unless you understand the router’s DHCP range. A router reservation is safer for most beginners because it avoids duplicate addresses.
