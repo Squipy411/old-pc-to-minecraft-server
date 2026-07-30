@@ -1,0 +1,18 @@
+## The controls
+
+**Start** launches a stopped server. **Stop** asks Minecraft to save and shut down cleanly. **Restart** performs a normal stop followed by start. **Kill** forcibly ends the process; use it only when a normal stop cannot complete and accept corruption risk.
+
+**Console** shows live output and accepts server commands. **File manager** edits and uploads server files. **Player list** manages online/banned/operator state. **Backups** creates and restores copies. **Schedules** automates starts, stops, commands, and backups. **Logs** preserve output for investigation. **Resource usage** shows CPU/RAM trends. **Status** tells you whether Crafty considers the process running.
+
+## A normal weekly routine
+
+- Check that scheduled backups completed and one copy exists off the server drive.
+- Review disk free space and unusually large logs/backups.
+- Read update notices without installing everything immediately.
+- Restart only when a mod/update requires it or performance investigation supports it.
+- Remove operator status people no longer need.
+- Confirm the public hostname still works after router or ISP changes.
+
+## When Stop hangs
+
+Wait several minutes during a large save. Read the console for a stuck backup, watchdog, or mod. Do not repeatedly click buttons. If a kill becomes unavoidable, make a copy of the server directory before the next start, then inspect the latest log and run a local join/world check.
