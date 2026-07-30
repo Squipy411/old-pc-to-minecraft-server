@@ -1,0 +1,33 @@
+## The finished setup
+
+**Self-hosting** means the Minecraft server runs on a computer you control, in your home. Your players run the Minecraft **client** on their own computers. ZimaOS is the operating system—the base software that replaces Windows on the old PC. Crafty Controller is a web dashboard for creating and managing game servers. Fabric is a lightweight mod loader. Playit.gg can carry players through a tunnel when port forwarding is unavailable or unwanted.
+
+The software in this route can be used without a hosting subscription. You still pay for electricity and internet, and optional services may sell paid extras. The server goes offline during a power or home-internet outage. Old hardware can be slow, noisy, unreliable, or surprisingly expensive to leave on.
+
+> [!NOTE] A realistic goal
+> A small, carefully configured friend-group server—not a public network for hundreds of strangers. Some old PCs should stay retired.
+
+## What everyone needs
+
+- You need the spare x86-64 PC, an 8 GB or larger USB stick, Ethernet, router access, and a second device with a browser.
+- Each player needs a legitimate Minecraft: Java Edition account and the exact Minecraft version used by the server.
+- If a mod is required on both sides, each player also needs the matching Fabric Loader, Fabric API when required, and the same mod version.
+- The server PC must stay powered on while people play.
+
+## The vocabulary, in plain language
+
+**Operating system:** the main software that starts the PC and runs everything else. **Server:** a program that keeps the shared world. **Client:** the game on a player’s computer. **LAN:** the private network inside your home. **IP address:** a device’s network address, like a house number. **Port:** a numbered door used by one service; Minecraft Java normally uses `25565`.
+
+**Router:** the box joining your home network to the internet. **Container:** an isolated package that runs an app and its dependencies. **Java:** the runtime Minecraft Java uses. **Fabric:** a loader that lets compatible mods start. **Mod:** code that changes the game. **Datapack:** data-driven Minecraft content placed in a world, often without a mod loader.
+
+**Whitelist:** an approved-player list. **Backup:** a separate copy you can restore. **BIOS/UEFI:** firmware that starts the physical PC before the operating system. **CGNAT:** an ISP arrangement where customers share a public IP, which often prevents normal port forwarding.
+
+## Risks worth accepting consciously
+
+- Installing ZimaOS erases the selected drive.
+- Mods can conflict; updates can break compatibility.
+- Home upload speed and latency affect players outside your house.
+- Forward only the Minecraft port. Never publish ZimaOS, Crafty, SSH, Docker, or database management ports.
+- A backup on the same physical drive does not survive that drive failing.
+
+This guide separates verified project instructions from generic router and hardware advice. When an interface differs, use the linked official documentation as the source of truth.
