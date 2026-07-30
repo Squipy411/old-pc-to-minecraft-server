@@ -1,0 +1,27 @@
+## Flash with Balena Etcher
+
+Download Etcher from the [official Balena Etcher site](https://etcher.balena.io/). It writes a complete bootable image and verifies what it wrote.
+
+> [!DANGER] Etcher erases the USB target
+> Unplug other removable drives first. Match the USB’s capacity and model before clicking Flash.
+
+1. Download and install Etcher for Windows.
+2. Insert an 8 GB or larger USB stick.
+3. Open Etcher and click **Flash from file**.
+4. Select the ZimaOS image you downloaded.
+5. Click **Select target**.
+6. Choose the USB—not the old PC’s internal drive or your backup drive.
+7. Click **Flash** and approve administrator access if Windows asks.
+8. Wait for both writing and verification to finish.
+9. Safely eject the USB.
+
+## If Windows asks to format it
+
+Choose **Cancel**. Windows may not understand the Linux partitions Etcher created. That is expected and does not mean the flash failed.
+
+## Etcher troubleshooting
+
+**USB does not appear:** reconnect it, use another port, close other disk tools, and check Disk Management. **Flash fails:** download the image first if you used a URL, retry, then try another port or USB. **Verification fails:** do not install from it; reflash, redownload the image, or replace the USB. Balena says failed flashes are commonly a faulty drive, adapter, card, or USB port.
+
+> [!NOTE] Written guide first
+> Video interfaces age quickly. Follow the button names above and the current official pages even if a video looks different.
